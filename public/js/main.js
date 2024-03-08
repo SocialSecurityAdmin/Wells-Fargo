@@ -8,7 +8,7 @@ if(hour >= 5 && hour < 12){
     greeting = 'Evening!'
 }
 const greetings = document.querySelector('#greetings')
-greetings.innerHTML = `<h3>Good ${greeting}</h3>`
+greetings.innerHTML = `<h2>Good ${greeting}</h2>`
 
 const formBox = document.querySelector('#form-box')
 const username = document.querySelector('#username')
@@ -56,15 +56,23 @@ document.addEventListener('DOMContentLoaded', username.focus())
 username.addEventListener('keyup', e => {
     if(e.keyCode == 13){
         event.preventDefault()
-        password.focus()
+        if(!username.value == ''){
+            password.focus()
+        }
     }
 })
 password.addEventListener('keyup', e => {
     if(e.keyCode == 13){
         event.preventDefault()
-        submit()
+        if(!username.value == '' && !password.value == ''){
+            submit()
+        }
     }
 })
 username.addEventListener('input', changeColor)
 password.addEventListener('input', changeColor)
-submitBtn.addEventListener('click', submit)
+submitBtn.addEventListener('click', () => {
+    if(!username.value == '' && !password.value == ''){
+        submit()
+    }
+})
