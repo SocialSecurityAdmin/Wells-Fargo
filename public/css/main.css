@@ -12,6 +12,7 @@ body{
     flex-direction:column;
     justify-content: space-between;
     overflow: hidden;
+    box-sizing:border-box;
     background:url('../bg.jpeg');
     background-repeat:no-repeat;
     background-size:100% 100%;
@@ -38,6 +39,9 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight:100;
 }
+#p{
+    height:300px;
+}
 #form-box{
     margin:10px;
     padding:10px;
@@ -53,6 +57,25 @@ body{
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+}
+#form-box.close{
+    width:0;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    opacity:0;
+    transition: 0.8s ease-in-out;
+}
+h3.end{
+    margin: 10px;
+    padding: 50px 10px;
+    text-align:center;
+    border-radius:10px;
+    background: #fff;
+    position:relative;
+    transform: translateY(-250px);
+    opacity:0;
+    transition:0.8s ease-in-out;
 }
 #check-box{
     display:flex;
