@@ -67,7 +67,6 @@ body{
     padding: 0;
     overflow: hidden;
     opacity:0;
-    transition: 0.8s ease-in-out;
 }
 h3.end{
     margin: 10px;
